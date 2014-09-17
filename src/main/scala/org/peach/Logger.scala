@@ -60,48 +60,48 @@ object BaseSample extends App with SampleData {
 
 object DumpTheMapSample extends App with SampleData {
 
-  val atError = new Logger(Logger.ERROR_LEVEL)
+  val logger = new Logger(Logger.ERROR_LEVEL)
 
   println("expects a call to dump the map, it is fine")
   println("--------------")
-  atError.error(mapDump)
+  logger.error(mapDump)
   println("--------------\n")
 
 }
 
 object DoNotDumpTheMapSample extends App with SampleData {
 
-  val atError = new Logger(Logger.ERROR_LEVEL)
+  val logger = new Logger(Logger.ERROR_LEVEL)
 
   println("expects NO call to dump the map!")
   println("--------------")
-  atError.error("ciao")
-  atError.warn(mapDump)
+  logger.error("ciao")
+  logger.warn(mapDump)
   println("--------------\n")
 
 }
 
 object ButDumpTheMapWhenIsCallByValueSample extends App with SampleData {
 
-  val atError = new Logger(Logger.ERROR_LEVEL)
+  val logger = new Logger(Logger.ERROR_LEVEL)
 
   println("expects a call to dump the map!")
   println("--------------")
-  atError.error("ciao")
-  atError.warnByValue(mapDump)
+  logger.error("ciao")
+  logger.warnByValue(mapDump)
   println("--------------\n")
 
 }
 
 object TogetherSample extends App with SampleData {
 
-  val atError = new Logger(Logger.ERROR_LEVEL)
+  val logger = new Logger(Logger.ERROR_LEVEL)
 
   println("expects only a call to dump the map!")
   println("--------------")
-  atError.error("ciao")
-  atError.warn(mapDump)
-  atError.warnByValue(mapDump)
+  logger.error("ciao")
+  logger.warn(mapDump)
+  logger.warnByValue(mapDump)
   println("--------------\n")
 
 }
