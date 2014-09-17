@@ -7,8 +7,6 @@ object Logger {
   require { ERROR_LEVEL < WARN_LEVEL}
 }
 
-case class LogMessage(message: String, level: Int = Logger.WARN_LEVEL)
-
 class Logger(val level: Int = Logger.WARN_LEVEL) {
 
   import Logger._
